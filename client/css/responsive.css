@@ -1,0 +1,49 @@
+@media (max-width: 768px) {
+
+   /* Show hamburger menu on mobile */
+   .hamburger {
+      display: flex;
+   }
+
+   /* Hide navigation items by default on mobile */
+   .navigation-items {
+      display: none;
+      position: absolute;
+      /* Overlay positioning */
+      top: 100%;
+      /* Below navbar */
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      flex-direction: column;
+      /* Stack vertically */
+      padding: 1rem 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      gap: 0;
+      border-top: 1px solid #e2e8f0;
+   }
+
+   /* Show navigation when active class is applied */
+   .navigation-items.active {
+      display: flex;
+   }
+
+   /* Mobile navigation link styling */
+   .navigation-items a {
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      border-bottom: 1px solid #f1f5f9;
+      /* Separator lines */
+   }
+
+   .navigation-items a:last-child {
+      border-bottom: none;
+      /* Remove border from last item */
+   }
+
+   /* Adjust navbar padding on mobile */
+   .navbar {
+      padding: 1rem;
+   }
+}

@@ -1,0 +1,183 @@
+/* Color Theme Variables */
+:root {
+   --color-primary: #F24B99;
+   --color-secondary: #f472aea3;
+   --color-background-light: #fcfcfc;
+   --color-surface-container: #F2ACBF;
+   --color-light-text: #D99CA7;
+}
+
+/* General Body and Layout */
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+   background-color: var(--color-secondary);
+   position: sticky;
+   box-shadow: none;
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+   padding: 1.5rem 0;
+}
+
+.navbar-container {
+   max-width: 1280px;
+   margin: 0 auto;
+   padding: 0 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo-image {
+   height: 3rem;
+   width: auto;
+   border-radius: 0;
+}
+
+/* Grouping for links and button */
+.nav-right {
+   display: flex;
+   align-items: center;
+   gap: 2.5rem;
+   /* Consistent spacing */
+}
+
+.navigation-items {
+   display: flex;
+   list-style: none;
+   gap: 2.5rem;
+   align-items: center;
+   padding: 0;
+   /* Remove default padding from list */
+   margin: 0;
+   /* Remove default margin from list */
+}
+
+.navigation-items a {
+   text-decoration: none;
+   color: var(--color-background-light);
+   font-weight: 500;
+   transition: all 0.3s ease-in-out;
+   position: relative;
+   font-size: 0.95rem;
+   padding: 0.75rem 0;
+   /* Adjust padding for links */
+}
+
+.navigation-items a:hover {
+   color: var(--color-light-text);
+}
+
+/* Animated underline effect on navigation links */
+.navigation-items a::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   transform: scaleX(0);
+   height: 2px;
+   bottom: 0;
+   left: 0;
+   background-color: var(--color-background-light);
+   transform-origin: bottom right;
+   transition: transform 0.2s ease-out;
+}
+
+/* Show underline on hover */
+.navigation-items a:hover::after {
+   transform: scaleX(1);
+   transform-origin: bottom left;
+}
+
+/* Mobile Hamburger menu container */
+.hamburger {
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+}
+
+/* Hamburger menu icon styling */
+.hamburger span {
+   font-size: 1.5rem;
+   color: var(--color-background-light);
+   transition: color 0.3s ease-in-out;
+}
+
+.hamburger span:hover {
+   color: var(--color-primary);
+}
+
+/* Close button initially hidden */
+#closeHam {
+   display: none;
+}
+
+/* --- "Enquire Now" Button Styling --- */
+.button-cta {
+   background-color: var(--color-primary);
+   color: var(--color-background-light);
+   border: 1px solid var(--color-primary);
+   padding: 0.75rem 1.5rem;
+   border-radius: 2rem;
+   text-transform: uppercase;
+   font-weight: 600;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s ease-in-out;
+}
+
+.button-cta:hover {
+   background-color: var(--color-primary);
+   color: var(--color-secondary);
+}
+
+/* --- Mobile Menu Styling --- */
+@media (max-width: 768px) {
+   .navbar-container {
+      padding: 1rem 1.5rem;
+      flex-wrap: wrap;
+      /* Allows items to wrap to a new line */
+      justify-content: center;
+   }
+
+   .nav-right {
+      display: none;
+      /* Hide the entire nav group on mobile */
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+      align-items: center;
+      gap: 1.5rem;
+   }
+
+   /* Show mobile menu when 'is-open' is applied by JS */
+   .nav-right.is-open {
+      display: flex;
+   }
+
+   .mobile-menu-toggle {
+      display: block;
+      /* Show hamburger button */
+      margin-left: auto;
+   }
+
+   .navigation-items {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+   }
+
+   .navigation-items a {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      text-align: center;
+   }
+
+   .button-cta {
+      margin-top: 1rem;
+   }
+}
