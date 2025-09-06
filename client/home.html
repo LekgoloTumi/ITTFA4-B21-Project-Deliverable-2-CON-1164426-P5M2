@@ -4,41 +4,69 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Mowana Spa</title>
-   <link rel="stylesheet" href="/ITTFA4-B21-Project-Deliverable-2-CON-1164426-P5M2/client/css/styles.css">
-   <link rel="stylesheet" href="/ITTFA4-B21-Project-Deliverable-2-CON-1164426-P5M2/client/css/responsive.css">
-   <script src="/ITTFA4-B21-Project-Deliverable-2-CON-1164426-P5M2/client/js/script.js" defer></script>
-   <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-   </style>
+   <title>Monwana Spa</title>
+   <link rel="stylesheet" href="css/styles.css">
+   <script src="js/script.js" defer></script>
 </head>
 
 <body>
    <header class="navigation-header">
       <nav class="navbar">
-         <!-- Spa Logo -->
          <div class="logo-container">
-            <img src="assets/icons/mowana-spa-logox2.png" alt="logoMonwana" class="logo-image">
+            <a href="#" data-page="home">
+               <img src="assets/icons/mowana-spa-logox2.png" alt="Monwana Spa" class="logo-image">
+            </a>
          </div>
 
-         <!-- Navigation Bar -->
          <div class="navigation-items" id="navigation-items">
-            <a href="#Packages">Our Packages</a>
-            <a href="#Packages">The Retreat</a>
-            <a href="#Packages">Corporate</a>
-            <a href="#Packages">Mowana Relaxation Zone</a>
-            <a href="#Packages">Offers</a>
-            <a href="#Packages">Vouchers</a>
-            <a href="#Packages">Contact Us</a>
-            <button class="button-cta" type="button">Enquire Now</button>
+            <a href="#" data-page="packages">OUR PACKAGES</a>
+            <a href="#" data-page="retreat">THE RETREAT</a>
+            <a href="#" data-page="corporate">CORPORATE</a>
+            <a href="#" data-page="zone">MOWANA RELAXATION ZONE</a>
+            <a href="#" data-page="offers">OFFERS</a>
+            <a href="#" data-page="vouchers">VOUCHERS</a>
+            <a href="#" data-page="contact">CONTACT US</a>
+            <button class="button-cta" type="button">ENQUIRE NOW</button>
          </div>
 
-         <!-- Hamburger Icon -->
          <div class="hamburger">
-            <span id="openHam">&#9776</span>
-            <span id="closeHam">&#x2716</span>
+            <span id="openHam">&#9776;</span>
+            <span id="closeHam">&#x2716;</span>
          </div>
       </nav>
    </header>
+
+   <!-- Hero Section - Main Landing -->
+   <section class="hero" id="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+         <h1 class="hero-script-text">Relax, Breathe & Unwind</h1>
+      </div>
+   </section>
+
+   <!-- Page Sections -->
+   <section class="page-section" id="packages">
+      <div class="services-grid">
+         <div class="service-card" data-services="spa">
+            <div class="card-background spa-packages">
+               <div class="card-overlay"></div>
+               <div class="card-content">
+                  <h2 class="card-title">Pampering Spa Packages</h2>
+               </div>
+            </div>
+         </div>
+
+         <div class="service-card" data-services="beauty">
+            <div class="card-background beauty-treatments">
+               <div class="card-overlay"></div>
+               <div class="card-content">
+                  <h2 class="card-title">Luxurious Beauty Treatments</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
 </body>
+
 </html>

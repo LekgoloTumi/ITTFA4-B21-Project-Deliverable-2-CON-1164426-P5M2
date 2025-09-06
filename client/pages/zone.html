@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Monwana Spa - Relax, Breathe & Unwind</title>
+   <link rel="stylesheet" href="../css/styles.css">
+   <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+   <header class="navigation-header">
+      <nav class="navbar">
+         <div class="logo-container">
+            <a href="#" data-page="home" onclick="showHome()">
+               <img src="../assets/icons/mowana-spa-logox2.png" alt="Monwana Spa" class="logo-image">
+            </a>
+         </div>
+
+         <div class="navigation-items" id="navigation-items">
+            <a href="#" data-page="packages">OUR PACKAGES</a>
+            <a href="#" data-page="retreat">THE RETREAT</a>
+            <a href="#" data-page="corporate">CORPORATE</a>
+            <a href="#" data-page="zone">MOWANA RELAXATION ZONE</a>
+            <a href="#" data-page="offers">OFFERS</a>
+            <a href="#" data-page="vouchers">VOUCHERS</a>
+            <a href="#" data-page="contact">CONTACT US</a>
+            <button class="button-cta" type="button">ENQUIRE NOW</button>
+         </div>
+
+         <div class="hamburger">
+            <span id="openHam">&#9776;</span>
+            <span id="closeHam">&#x2716;</span>
+         </div>
+      </nav>
+   </header>
+
+   <!-- Hero Section - Main Landing -->
+   <section class="hero" id="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+         <h1 class="hero-script-text">Relax, Breathe & Unwind</h1>
+      </div>
+   </section>
+
+   <!-- Page Sections (Hidden by default) -->
+   <section class="page-section" id="packages">
+      <div class="services-grid">
+         <div class="service-card" data-services="spa">
+            <div class="card-background spa-packages">
+               <div class="card-overlay"></div>
+               <div class="card-content">
+                  <h2 class="card-title">Pampering Spa Packages</h2>
+               </div>
+            </div>
+         </div>
+
+         <div class="service-card" data-services="beauty">
+            <div class="card-background beauty-treatments">
+               <div class="card-overlay"></div>
+               <div class="card-content">
+                  <h2 class="card-title">Luxurious Beauty Treatments</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</body>
+
+</html>
