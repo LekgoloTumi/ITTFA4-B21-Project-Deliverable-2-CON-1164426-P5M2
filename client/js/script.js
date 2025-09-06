@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Define mapping of page names to image paths
     const pageImages = {
-        'home': 'url("/assets/images/mowana-gardens.jpg")',
+        'home': 'url("../assets/images/mowana-gardens.jpg")',
         'packages': 'url("/assets/images/mowana-spa-massage.jpg")',
     };
 
