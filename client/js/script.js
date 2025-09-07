@@ -1,131 +1,55 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Initialize hamburger menu functionality
-    const openHam = document.querySelector('#openHam');
-    const closeHam = document.querySelector('#closeHam');
-    const navigationItems = document.querySelector('#navigation-items');
-    const navbar = document.querySelector('.navbar');
-    const logoLink = document.querySelector('.logo-container a');
-
-    // Mobile menu toggle function
-    const toggleMobileMenu = (isOpen) => {
-        if (isOpen) {
-            navigationItems.classList.add('active');
-            closeHam.style.display = 'block';
-            openHam.style.display = 'none';
-        } else {
-            navigationItems.classList.remove('active');
-            closeHam.style.display = 'none';
-            openHam.style.display = 'block';
-        }
-    };
-
-    // Open mobile menu
-    openHam.addEventListener('click', () => toggleMobileMenu(true));
-    
-    // Close mobile menu
-    closeHam.addEventListener('click', () => toggleMobileMenu(false));
-
-    // Handle logo click to return home
-    if (logoLink) {
-        logoLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            window.location.href = '../home.html';
-        });
-    }
-
     // Define mapping of page names to image paths
     const pageImages = {
-        'home': 'url("../assets/images/mowana-gardens.jpg")',
-        'packages': 'url("/assets/images/mowana-spa-massage.jpg")',
+        'home': 'url("assets/images/mowana-gardens.jpg")',
+        'packages': 'url("assets/images/mowana-spa-massage.jpg")',
+        'retreat': 'url("assets/images/couples-mowana.jpg")',
+        'corporate': 'url("assets/images/lounges-23-450-300-100.jpg")',
+        'zone': 'url("assets/images/mowana-gardens.jpg")',
+        'offers': 'url("assets/images/ultimate-full-body-massage.jpg")',
+        'vouchers': 'url("assets/images/massage--foot---leg-13-450-300-100.jpg")',
+        'contact': 'url("assets/images/couple-pool-mowana.jpg")'
     };
 
     // Function to get current page name from URL
     function getCurrentPage() {
         const path = window.location.pathname;
         const filename = path.split('/').pop();
-        if (filename === '' || filename === '/home.html') {
+
+        // Handle root directory (home page)
+        if (filename === '' || filename === 'home.html' || filename === '/home.html') {
             return 'home';
         }
-        return filename.split('.')[0];
+
+        // Handle pages in subdirectories
+        const pageName = filename.split('.')[0];
+        return pageName || 'home';
     }
 
     // Function to update hero image based on current page
     function setHeroImage() {
         const heroSection = document.getElementById('hero');
         const currentPage = getCurrentPage();
+
+        console.log('Setting hero image for page:', currentPage); // Debug log
+
         if (heroSection && pageImages[currentPage]) {
-            heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), ${pageImages[currentPage]}`;
+            // Determine if we're in the pages directory or root directory
+            const isInPagesDirectory = window.location.pathname.includes('/pages/');
+            const imagePath = isInPagesDirectory
+                ? pageImages[currentPage].replace('url("assets/', 'url("../assets/')
+                : pageImages[currentPage];
+
+            console.log('Using image path:', imagePath); // Debug log
+            heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), ${imagePath}`;
+        } else {
+            console.warn('Hero section not found or no image defined for page:', currentPage);
         }
     }
-
-    // Handle navigation link clicks
-    document.querySelectorAll('.navigation-items a[data-page]').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const page = link.getAttribute('data-page');
-            
-            if (page) {
-                let filename;
-                if (page === 'home') {
-                    filename = '/home.html';
-                } else {
-                    filename = `/pages/${page}.html`;
-                }
-
-                window.location.href = filename;
-            }
-
-            // Close mobile menu if open
-            if (navigationItems.classList.contains('active')) {
-                toggleMobileMenu(false);
-            }
-        });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.navbar') && navigationItems.classList.contains('active')) {
-            toggleMobileMenu(false);
-        }
-    });
-
-    // Close mobile menu on resize
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && navigationItems.classList.contains('active')) {
-            toggleMobileMenu(false);
-        }
-    });
-
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
-    // CTA button functionality
-    document.querySelector('.button-cta').addEventListener('click', () => {
-        showPage('contact');
-        // Close mobile menu if open
-        if (navigationItems.classList.contains('active')) {
-            toggleMobileMenu(false);
-        }
-    });
 
     // Call function on page load to set hero image
     setHeroImage();
 });
-
-// Function to return to the home page
-function showHome() {
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    
-    // Reset page title
-    document.title = 'Monwana Spa - Luxury Wellness Retreat';
-}
 
 const SpaUtils = {
     // Smooth scroll to element
@@ -134,7 +58,7 @@ const SpaUtils = {
         if (element) {
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - offset;
-            
+
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
@@ -182,7 +106,7 @@ const SpaUtils = {
 // Initialize any additional features when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Monwana Spa website loaded successfully');
-    
+
     // Save page visit
     const visits = SpaUtils.getFromStorage('pageVisits') || 0;
     SpaUtils.saveToStorage('pageVisits', visits + 1);

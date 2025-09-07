@@ -4,29 +4,31 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="Content Security Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
-   <title>Monwana Spa - Relax, Breathe & Unwind</title>
+   <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com;">
+   <title>Monwana Spa - Our Packages</title>
    <link rel="stylesheet" href="../css/styles.css">
    <script src="../js/script.js" defer></script>
+   <script src="../js/navigation.js" defer></script>
 </head>
 
 <body>
    <header class="navigation-header">
       <nav class="navbar">
          <div class="logo-container">
-            <a href="#" data-page="home">
+            <a href="../home.html">
                <img src="../assets/icons/mowana-spa-logox2.png" alt="Monwana Spa" class="logo-image">
             </a>
          </div>
 
          <div class="navigation-items" id="navigation-items">
-            <a href="#" data-page="packages">OUR PACKAGES</a>
-            <a href="#" data-page="retreat">THE RETREAT</a>
-            <a href="#" data-page="corporate">CORPORATE</a>
-            <a href="#" data-page="zone">MOWANA RELAXATION ZONE</a>
-            <a href="#" data-page="offers">OFFERS</a>
-            <a href="#" data-page="vouchers">VOUCHERS</a>
-            <a href="#" data-page="contact">CONTACT US</a>
+            <a href="packages.html">OUR PACKAGES</a>
+            <a href="retreat.html">THE RETREAT</a>
+            <a href="corporate.html">CORPORATE</a>
+            <a href="zone.html">MOWANA RELAXATION ZONE</a>
+            <a href="offers.html">OFFERS</a>
+            <a href="vouchers.html">VOUCHERS</a>
+            <a href="contact.html">CONTACT US</a>
             <button class="button-cta" type="button">ENQUIRE NOW</button>
          </div>
 
@@ -40,7 +42,6 @@
    <!-- Hero Section - Main Landing -->
    <section class="hero" id="hero">
       <div class="hero-overlay"></div>
-
       <div class="hero-content">
          <h1 class="hero-script-text">Rest, Relaxation, & Restore</h1>
       </div>
@@ -57,7 +58,6 @@
                </div>
             </div>
          </div>
-
          <div class="service-card" data-services="beauty">
             <div class="card-background beauty-treatments">
                <div class="card-overlay"></div>

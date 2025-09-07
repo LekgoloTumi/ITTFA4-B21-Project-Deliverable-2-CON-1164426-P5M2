@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('responsive.css');
 
 /* CSS Variables */
 :root {
@@ -23,6 +24,7 @@ body {
    line-height: 1.6;
    color: var(--color-dark);
    overflow-x: hidden;
+   background-color: #fafafa;
 }
 
 /* Navigation Styles */
@@ -159,6 +161,7 @@ body {
    position: relative;
    overflow: hidden;
    transition: background-image 0.5s ease-in-out;
+   margin-top: 0;
 }
 
 .hero-overlay {
@@ -219,21 +222,22 @@ body {
 /* Page Content Sections */
 .page-section {
    min-height: 100vh;
-   padding: 6rem 2rem 4rem;
+   padding: 8rem 2rem 6rem;
    align-items: center;
    justify-content: center;
    background: linear-gradient(135deg, #f8f9ff 0%, #e8f4f8 100%);
    display: flex;
-   /* Make the section a flex container */
    flex-direction: column;
-   /* Stack the header and grid vertically */
    text-align: center;
+   max-width: 1400px;
+   margin: 0 auto;
 }
 
 .page-content {
    max-width: 1200px;
    width: 100%;
    text-align: center;
+   padding: 0 1rem;
 }
 
 .page-section h1 {
@@ -245,6 +249,170 @@ body {
    letter-spacing: 1px;
 }
 
+/* About Section Styles */
+.about-section {
+   text-align: center;
+   padding: 8rem 2rem 6rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+}
+
+.Welcome-text {
+   font-size: 16px;
+   font-weight: 500;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   color: #8b7355;
+   margin-bottom: 2rem;
+   font-family: 'Inter', sans-serif;
+   opacity: 0.8;
+}
+
+.about-title {
+   font-family: 'Crimson Text',serif;
+   font-size: 4.5rem;
+   font-weight: 400;
+   color: #b8860b;
+   margin-bottom: 20px;
+   font-style: italic;
+   position: relative;
+}
+
+
+.main-title {
+   font-family: 'Playfair Display', serif;
+   font-size: clamp(3rem, 6vw, 5rem);
+   font-weight: 400;
+   color: var(--color-primary);
+   margin-bottom: 3rem;
+   font-style: italic;
+   position: relative;
+   line-height: 1.2;
+}
+
+.underline {
+   width: 80px;
+   height: 3px;
+   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+   margin: 2rem auto 3rem;
+   border-radius: 2px;
+}
+
+.description {
+   font-size: 18px;
+   line-height: 1.8;
+   color: var(--color-dark);
+   font-weight: 400;
+   max-width: 800px;
+   margin: 0 auto 3rem;
+   font-family: 'Inter', sans-serif;
+   opacity: 0.9;
+}
+
+.bottom-underline {
+   width: 80px;
+   height: 3px;
+   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+   margin: 3rem auto 0;
+   border-radius: 2px;
+}
+
+/* Hotel Section Styles */
+.hotel-section {
+   min-height: 80vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: url('../assets/images/mowana-spa-massage.jpg');
+   border-radius: 150px;
+   overflow: hidden;
+}
+
+.hotel-grid {
+   background-color: var(--color-surface-container);
+   padding: 30px;
+   width: 90%;
+   max-width: 500px;
+   border-radius: 75px;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   margin-left: auto;
+   margin-right: 5%;
+}
+
+.hotel-title {
+   font-family: 'Crimson Text', serif;
+   font-size: 3.5rem;
+   font-weight: 400;
+   color: #b8860b;
+   margin-bottom: 0;
+   font-style: italic;
+   position: relative;
+}
+
+.grid-underline {
+   width: 220px;
+   height: 3px;
+   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+   margin-top: 15px;
+   margin-right: auto;
+   border-radius: 2px;
+}
+
+.hotel-description {
+   font-size: 16px;
+   line-height: 1.8;
+   color: #6b5b73;
+   font-weight: 400;
+   max-width: 700px;
+   margin: 40px auto;
+   font-family: 'Montserrat', sans-serif;
+}
+
+/* Wellness Section Styles */
+.wellness-section {
+   padding: 10rem 2rem;
+   background: url('../assets/banners/wellness-banner-mowana-spa.png');
+   background-repeat: repeat;
+   background-position: center;
+   background-size: auto;
+}
+
+/* Luxury Section Styles */
+.luxury-section {
+   min-height: 80vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 150px;
+   overflow: hidden;
+   gap: 40px;
+   background: url('../assets/banners/swirley-lines-left.png');
+}
+
+.luxury-grid {
+   background-color: var(--color-surface-container);
+   padding: 30px;
+   width: 90%;
+   max-width: 500px;
+   border-radius: 75px;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.luxury-image-container {
+   max-width: 600px;
+   border-radius: 150px;
+   overflow: hidden;
+   margin: 20px;
+}
+
+.luxury-image-container img {
+   display: block;
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
 /* Service card style */
 .container {
    max-width: 1200px;
@@ -253,20 +421,23 @@ body {
 
 .services-grid {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-   gap: 2rem;
-   margin-top: 2rem;
+   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+   gap: 3rem;
+   margin-top: 4rem;
    width: 100%;
+   max-width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .service-card {
    position: relative;
-   height: 300px;
+   height: 350px;
    border-radius: 20px;
    overflow: hidden;
    cursor: pointer;
    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .service-card::before {
@@ -283,7 +454,8 @@ body {
 
 .service-card:hover {
    transform: translateY(-10px) scale(1.02);
-   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%;
+   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+      0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .service-card:hover::before {
@@ -320,20 +492,21 @@ body {
    bottom: 0;
    left: 0;
    right: 0;
-   padding: 2rem;
+   padding: 2.5rem;
    z-index: 3;
    text-align: center;
 }
 
 .card-title {
    color: white;
-   font-size: 2.5rem;
+   font-size: clamp(2rem, 4vw, 2.8rem);
    font-weight: 700;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
    margin-bottom: 0.5rem;
    transform: translateY(0);
    transition: all 0.4s ease;
    line-height: 1.2;
+   font-family: 'Playfair Display', serif;
 }
 
 .service-card:hover .card-title {
@@ -426,6 +599,14 @@ body {
    .page-section {
       padding: 5rem 1rem 3rem;
    }
+
+   .about-section {
+      padding: 5rem 1rem 3rem;
+   }
+
+   .hotel-section {
+      padding: 5rem 1rem 3rem;
+   }
 }
 
 @media (max-width: 480px) {
@@ -442,6 +623,14 @@ body {
    }
 
    .page-section {
+      padding: 4rem 1rem 2rem;
+   }
+
+   .about-section {
+      padding: 4rem 1rem 2rem;
+   }
+
+   .hotel-section {
       padding: 4rem 1rem 2rem;
    }
 

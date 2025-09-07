@@ -1,3 +1,24 @@
+/* Tablet Styles */
+@media (max-width: 1024px) {
+   .page-section {
+      padding: 6rem 1.5rem 4rem;
+   }
+
+   .about-section {
+      padding: 6rem 1.5rem 4rem;
+   }
+
+   .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+   }
+
+   .service-card {
+      height: 320px;
+   }
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
 
    /* Show hamburger menu on mobile */
@@ -9,18 +30,15 @@
    .navigation-items {
       display: none;
       position: absolute;
-      /* Overlay positioning */
       top: 100%;
-      /* Below navbar */
       left: 0;
       right: 0;
-      background: #ffffff;
+      background: var(--color-secondary);
       flex-direction: column;
-      /* Stack vertically */
       padding: 1rem 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       gap: 0;
-      border-top: 1px solid #e2e8f0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
    }
 
    /* Show navigation when active class is applied */
@@ -33,17 +51,55 @@
       width: 100%;
       text-align: center;
       padding: 1rem;
-      border-bottom: 1px solid #f1f5f9;
-      /* Separator lines */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
    }
 
    .navigation-items a:last-child {
       border-bottom: none;
-      /* Remove border from last item */
    }
 
    /* Adjust navbar padding on mobile */
    .navbar {
       padding: 1rem;
+   }
+
+   /* Mobile page sections */
+   .page-section {
+      padding: 5rem 1rem 3rem;
+   }
+
+   .about-section {
+      padding: 5rem 1rem 3rem;
+   }
+
+   /* Mobile services grid */
+   .services-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+   }
+
+   .service-card {
+      height: 280px;
+   }
+
+   .card-content {
+      padding: 2rem;
+   }
+
+   /* Mobile typography */
+   .main-title {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      margin-bottom: 2rem;
+   }
+
+   .description {
+      font-size: 16px;
+      max-width: 100%;
+   }
+
+   .welcome-text {
+      font-size: 14px;
+      margin-bottom: 1.5rem;
    }
 }

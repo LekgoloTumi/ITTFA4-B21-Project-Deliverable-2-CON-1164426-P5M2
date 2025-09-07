@@ -5,29 +5,30 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
-   <title>Monwana Spa</title>
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com;">
+   <title>Mowana Spa</title>
    <link rel="stylesheet" href="css/styles.css">
    <script src="js/script.js" defer></script>
+   <script src="js/navigation.js" defer></script>
 </head>
 
 <body>
    <header class="navigation-header">
       <nav class="navbar">
          <div class="logo-container">
-            <a href="#" data-page="home">
+            <a href="home.html">
                <img src="assets/icons/mowana-spa-logox2.png" alt="Monwana Spa" class="logo-image">
             </a>
          </div>
 
          <div class="navigation-items" id="navigation-items">
-            <a href="#" data-page="packages">OUR PACKAGES</a>
-            <a href="#" data-page="retreat">THE RETREAT</a>
-            <a href="#" data-page="corporate">CORPORATE</a>
-            <a href="#" data-page="zone">MOWANA RELAXATION ZONE</a>
-            <a href="#" data-page="offers">OFFERS</a>
-            <a href="#" data-page="vouchers">VOUCHERS</a>
-            <a href="#" data-page="contact">CONTACT US</a>
+            <a href="pages/packages.html">OUR PACKAGES</a>
+            <a href="pages/retreat.html">THE RETREAT</a>
+            <a href="pages/corporate.html">CORPORATE</a>
+            <a href="pages/zone.html">MOWANA RELAXATION ZONE</a>
+            <a href="pages/offers.html">OFFERS</a>
+            <a href="pages/vouchers.html">VOUCHERS</a>
+            <a href="pages/contact.html">CONTACT US</a>
             <button class="button-cta" type="button">ENQUIRE NOW</button>
          </div>
 
@@ -47,8 +48,9 @@
       </div>
    </section>
 
-   <!-- Page Sections -->
+   <!-- Packages Section -->
    <section class="page-section" id="packages">
+      <!-- Services Grid -->
       <div class="services-grid">
          <div class="service-card" data-services="spa">
             <div class="card-background spa-packages">
@@ -58,7 +60,7 @@
                </div>
             </div>
          </div>
-
+         <!-- Service Cards -->
          <div class="service-card" data-services="beauty">
             <div class="card-background beauty-treatments">
                <div class="card-overlay"></div>
@@ -69,6 +71,66 @@
          </div>
       </div>
    </section>
+
+   <!-- About Us Section -->
+   <section class="about-section" id="about">
+      <h2 class="Welcome-text">Welcome To Our City</h2>
+
+      <h2 class="about-title">Oasis</h2>
+
+      <div class="underline"></div>
+      <p class="description">
+         Escape to tranquility at Mowana Spa, a serene oasis nestled within the lush gardens of the Indaba Hotel.
+         Indulge in our
+         signature pamper journeys, soothing massages, revitalizing facials, and luxurious hand & foot treatments, all
+         designed
+         to restore balance to body and mind. With skilled therapists, soothing products, and a peaceful ambiance,
+         Mowana Spa is
+         your perfect destination for self-care, whether for a solo escape, a romantic retreat, or a group celebration.
+      </p>
+      <div class="bottom-underline"></div>
+   </section>
+
+   <!-- Hotel Section -->
+   <section class="hotel-section" id="hotel">
+      <div class="hotel-grid">
+         <h2 class="hotel-title">Hotel Tranquility</h2>
+         <div class="grid-underline"></div>
+         <p class="hotel-description">
+            Nestled within the lush gardens of the Indaba Hotel, we offer a tranquil escape where luxury and relaxation
+            meet,
+            perfectly complementing the hotel’s warm hospitality, world-class conferencing facilities, and charming
+            country-style
+            ambiance.
+         </p>
+         <a class="button-cta" type="button">Visit Indaba Hotel</a>
+      </div>
+   </section>
+
+   <!-- Wellness Section -->
+   <section class="wellness-section" id="wellness">
+   </section>
+
+   <!-- Luxury Section -->
+   <section class="luxury-section" id="luxury">
+      <div class="luxury-grid">
+         <h2 class="luxury-title">Ultimate Luxury</h2>
+         <div class="grid-underline"></div>
+         <p class="luxury-description">
+            At Mowana Spa, we believe in taking time away from reality to restore balance, rejuvenate the spirit, and create moments
+            of pure tranquility.
+         </p>
+         <a class="button-cta" type="button">About Us</a>
+      </div>
+
+      <!-- Images -->
+      <div class="luxury-image-container">
+         <img src="assets/images/ultimate-full-body-massage.jpg" alt="ultimate-full-body-massage" class="ultimate-full-body-massage">
+         <img src="assets/images/ultimate-leg-massage.jpg" alt="ultimate-leg-massage" class="ultimate-leg-massage">
+         <img src="assets/images/couple-pool-mowana.jpg" alt="couple-pool-mowana" class="couple-pool-mowana">
+      </div>     
+   </section>
+
 </body>
 
 </html>
