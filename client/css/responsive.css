@@ -103,3 +103,27 @@
       margin-bottom: 1.5rem;
    }
 }
+
+/* Responsive Design for Contact Page */
+
+@media (max-width: 768px) {
+   .contact-section {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .contact-container,
+   .map-container {
+      max-width: 100%;
+   }
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .contact-form {
+    gap: 0.7rem;
+  }
+}

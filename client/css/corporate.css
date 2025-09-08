@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.card-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card-title {
+    color: #f0f0f0;
+    z-index: 10;
+    text-align: center;
+}
+
+.corporate-packages-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 5rem;
+    
+    .section-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-size: 24px;
+        color: #7C4A44 !important;
+    }
+   
+    h2 {
+        font-family: 'Roboto', serif;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: #B3723A !important;
+        font-size: 3rem;
+        position: relative;
+        border: none;
+    }
+    
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 3px;
+        background: #e91e63;
+    }
+
+    .section-description {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 50%;
+        font-family: 'Montserrat',sans-serif;
+        color: #7C4A44 !important;
+        font-weight: 200;
+        margin-top: 1.5rem;
+    }
+}
+
+.team-building {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 2rem 2rem;
+
+   .tb-left {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 50%;
+
+        
+    }
+
+    .tb-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+.tb-left h2 {
+    font-family: 'Roboto', serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #B3723A !important;
+    font-size: 3rem;
+    position: relative;
+    border: none;
+}
+
+.tb-left h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30%;
+    height: 3px;
+    background: #e91e63;
+}
+
+.tb-left button {
+    width: 120px;
+    padding: 5px 5px;
+    color: white;
+    background-color: #F24B99;
+    border: none;
+    border-radius: 1rem;
+}
+
+.team-building-card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.tb-card {
+    height: 120px;
+    width: 120px;
+    border-radius: 30%;
+    overflow: hidden; /* Add to contain the image properly */
+    background: #f7d9e2;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tb-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Add to maintain aspect ratio */
+    display: block;
+}
+
+.tb-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.tb-right-image {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 0px 20px gray;
+    border: 1px solid gray;
+}
+
+/* Ensure .services-grid and .service-card match home page style */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-card {
+    position: relative;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    background: #fff;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+        0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover::before {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card:hover .card-background {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.2) 0%, rgba(244, 143, 177, 0.2) 100%);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card-title {
+    color: #fff;
+    z-index: 10;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Team Building Cards */
+.team-building-card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.tb-card {
+    height: 120px;
+    width: 120px;
+    border-radius: 30%;
+    overflow: hidden;
+    background: #f7d9e2;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tb-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Fix for .tb-right-image */
+.tb-right-image {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 0px 20px gray;
+    border: 1px solid gray;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-building {
+        flex-direction: column;
+    }
+    .tb-left, .tb-right {
+        width: 100%;
+    }
+    .tb-right-image {
+        max-width: 100%;
+        height: auto;
+    }
+}

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         'zone': 'url("assets/images/mowana-gardens.jpg")',
         'offers': 'url("assets/images/ultimate-full-body-massage.jpg")',
         'vouchers': 'url("assets/images/massage--foot---leg-13-450-300-100.jpg")',
-        'contact': 'url("assets/images/couple-pool-mowana.jpg")'
+        'contact': 'url("assets/images/couples-spa.jpg")'
     };
 
     const testimonials = [

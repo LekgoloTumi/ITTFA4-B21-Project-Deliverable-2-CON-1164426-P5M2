@@ -5,9 +5,10 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com;">
+   content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: https://images.unsplash.com https://source.unsplash.com https://unsplash.com; font-src 'self' https://fonts.gstatic.com;">
    <title>Monwana Spa - Our Packages</title>
    <link rel="stylesheet" href="../css/styles.css">
+   <link rel="stylesheet" href="../css/corporate.css">
    <script src="../js/script.js" defer></script>
    <script src="../js/navigation.js" defer></script>
 </head>
@@ -43,7 +44,7 @@
    <section class="hero" id="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-         <h1 class="hero-script-text">Rest, Relaxation, & Restore</h1>
+         <h1 class="hero-script-text">Professional, Tailored, Seamless</h1>
       </div>
    </section>
 
@@ -54,7 +55,7 @@
             <div class="card-background spa-packages">
                <div class="card-overlay"></div>
                <div class="card-content">
-                  <h2 class="card-title">Pampering Spa Packages</h2>
+                  <h2 class="card-title">Corporate Spa Packages</h2>
                </div>
             </div>
          </div>
@@ -62,33 +63,49 @@
             <div class="card-background beauty-treatments">
                <div class="card-overlay"></div>
                <div class="card-content">
-                  <h2 class="card-title">Luxurious Beauty Treatments</h2>
+                  <h2 class="card-title">Mowana Relaxation Zone</h2>
                </div>
             </div>
          </div>
       </div>
    </section>
+   
 
-   <!-- Testimonials Section -->
-   <section class="testimonial-section" id="testimonials">
-      <div class="quote-icon">&#10077;</div>
-      <h2 class="testimonial-title">What Our Clients Say</h2>
-   
-      <div class="testimonials-grid">
-         <div class="testimonial-card">
-            <p class="testimonial-text" id="testimonialText">
-               "The experience is always beautiful. We got engaged here, and every year we celebrate our wedding
-               anniversary at the spa.
-               Perfect service, wonderful staff. It has become our second home."</p>
-            <p class="client-name" id="clientName">Mpho</p>
+   <section class="corporate-packages-section">
+      <p class="section-title">INTERACTIVE PACKAGES</p>
+      <h2>Corporate</h2>
+      <p class="section-description">At Mowana Spa, we offer exclusive corporate spa packages designed to promote relaxation, team bonding, and well-being in a professional setting. Whether you're looking to reward employees with a rejuvenating spa day, host a team-building retreat, or provide stress-relief treatments during a busy conference, our packages are tailored to meet your company's needs. With options that include massages, facials, and wellness treatments, we ensure a seamless experience that leaves your team refreshed, recharged, and ready to perform at their best.</p>
+   </section>
+
+   <section class="team-building">
+      <div class="tb-left">
+         <h2>Team building</h2>
+         <p>Our Corporate Interactive Packages provide the perfect blend of relaxation and engagement, offering unique team-building experiences that foster collaboration and boost morale in a serene setting.</p>
+         <button>ENQUIRE NOW</button>
+         <div class="team-building-card-container">
+            <div class="tb-card">
+               <img src="https://unsplash.com/photos/art-creativity-hobby-job-and-creative-occupation-concept-beautiful-woman-painting-at-home-W77a68_FvMs">
+            </div>
+            <div class="tb-card">
+               <img src="https://source.unsplash.com/random">
+            </div>
+            <div class="tb-card">
+               <img src="https://source.unsplash.com/random">
+            </div>
+
          </div>
-   
-         <button class="navigation nav-prev" button onclick="previousTestimonial()">&#10094;</button>
-         <button class="navigation nav-next" button onclick="nextTestimonial()">&#10095;</button>
       </div>
-   
+      <div class="tb-right">
+         <div class="tb-right">
+            <img src="../assets/images/massage-head-neck-shoulder.jpg" alt="Massage therapy" class="tb-right-image">
+        </div>
+      </div>
    </section>
    
+   <section class="year-end-treats">
+
+   </section>
+
    <!-- What's On Section -->
    <section class="whats-on-section" id="whats-on">
       <div class="container">
@@ -277,7 +294,7 @@
          <!-- Left Column - Logo and Sister Properties -->
          <div>
             <div class="footer-logo">
-               <img src="assets/icons/mowana-spa-logox2.png" alt="Mowana Spa">
+               <img src="../assets/icons/mowana-spa-logox2.png" alt="Mowana Spa">
             </div>
             <div class="sister-properties">
                <h3>Our Sister Properties</h3>
@@ -288,25 +305,25 @@
                </ul>
             </div>
          </div>
-   
+
          <!-- Middle Column - Quick Links -->
          <div>
             <div class="quick-links">
                <h3>Quick Links</h3>
                <div class="quick-links-grid">
-                  <a href="pages/packages.html">Our Packages</a>
-                  <a href="pages/retreat.html">The Retreat</a>
-                  <a href="pages/corporate.html">Corporate</a>
-                  <a href="pages/offers.html">Offers</a>
-                  <a href="pages/zone.html">Mowana Relaxation Zone</a>
-                  <a href="pages/contact.html">About</a>
-                  <a href="pages/vouchers.html">Vouchers</a>
-                  <a href="pages/contact.html">Contact Us</a>
-                  <a href="#gallery">Gallery</a>
+                  <a href="../pages/packages.html">Our Packages</a>
+                  <a href="../pages/retreat.html">The Retreat</a>
+                  <a href="../pages/corporate.html">Corporate</a>
+                  <a href="../pages/offers.html">Offers</a>
+                  <a href="../pages/zone.html">Mowana Relaxation Zone</a>
+                  <a href="../pages/contact.html">About</a>
+                  <a href="../pages/vouchers.html">Vouchers</a>
+                  <a href="../pages/contact.html">Contact Us</a>
+                  <a href="../home.html#gallery">Gallery</a>
                </div>
             </div>
          </div>
-   
+
          <!-- Right Column - Contact and Social -->
          <div class="contact-section">
             <button class="enquire-btn">Enquire Now</button>
@@ -327,14 +344,14 @@
             </div>
          </div>
       </div>
-   
+
       <div class="footer-bottom">
          <div>
             <div class="copyright">Copyright © <span id="year"></span> Mowana Spa. All Rights Reserved.</div>
             <div class="website-credit">Website Design & Maintenance by T-Host IT</div>
          </div>
       </div>
-   
+
       <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
    </footer>
 </body>
